@@ -1,0 +1,27 @@
+import 'package:ecommerce_api/constant/model.dart';
+import 'package:flutter/material.dart';
+
+Widget customButton(String buttonText, onTap) {
+  return SizedBox(
+    width: 1,
+    height: 56,
+    child: InkWell(
+      onTap: onTap,
+      child: Container(
+        height: 56,
+        child: Center(
+            child: Text(
+          buttonText,
+          style: myStyle(20, Colors.white, FontWeight.w700),
+        )),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(colors: [
+            Color(0xff5660CD),
+            Color(0xff7B81EC),
+          ]),
+          borderRadius: BorderRadius.circular(50),
+        ),
+      ),
+    ),
+  );
+}
